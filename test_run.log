@@ -1,0 +1,488 @@
+
+> dev
+> tsx ./src/app.ts
+
+request Football API: /teams, params: {"name":"Arsenal"}
+{
+  get: 'teams',
+  parameters: { name: 'Arsenal' },
+  errors: [],
+  results: 3,
+  paging: { current: 1, total: 1 },
+  response: [
+    { team: [Object], venue: [Object] },
+    { team: [Object], venue: [Object] },
+    { team: [Object], venue: [Object] }
+  ]
+} 200
+{
+  role: 'assistant',
+  content: null,
+  function_call: { name: 'get_teams', arguments: '{\n  "name": "Arsenal"\n}' }
+} { name: 'Arsenal' } {
+  team: {
+    id: 42,
+    name: 'Arsenal',
+    code: 'ARS',
+    country: 'England',
+    founded: 1886,
+    national: false,
+    logo: 'https://media-3.api-sports.io/football/teams/42.png'
+  },
+  venue: {
+    id: 494,
+    name: 'Emirates Stadium',
+    address: 'Queensland Road',
+    city: 'London',
+    capacity: 60383,
+    surface: 'grass',
+    image: 'https://media-1.api-sports.io/football/venues/494.png'
+  }
+}
+[
+  {
+    role: 'system',
+    content: "You're a helpful assistant finding all the information related to football teams and matches"
+  },
+  {
+    role: 'user',
+    content: 'Tell me about last match between Arsenal and Liverpool'
+  },
+  {
+    role: 'assistant',
+    content: null,
+    function_call: { name: 'get_teams', arguments: '{\n  "name": "Arsenal"\n}' }
+  },
+  {
+    role: 'function',
+    name: 'get_teams',
+    content: '{"team":{"id":42,"name":"Arsenal","code":"ARS","country":"England","founded":1886,"national":false,"logo":"https://media-3.api-sports.io/football/teams/42.png"},"venue":{"id":494,"name":"Emirates Stadium","address":"Queensland Road","city":"London","capacity":60383,"surface":"grass","image":"https://media-1.api-sports.io/football/venues/494.png"}}'
+  }
+]
+request Football API: /teams, params: {"name":"Liverpool"}
+{
+  get: 'teams',
+  parameters: { name: 'Liverpool' },
+  errors: [],
+  results: 1,
+  paging: { current: 1, total: 1 },
+  response: [ { team: [Object], venue: [Object] } ]
+} 200
+{
+  role: 'assistant',
+  content: null,
+  function_call: { name: 'get_teams', arguments: '{\n  "name": "Liverpool"\n}' }
+} { name: 'Liverpool' } {
+  team: {
+    id: 40,
+    name: 'Liverpool',
+    code: 'LIV',
+    country: 'England',
+    founded: 1892,
+    national: false,
+    logo: 'https://media-1.api-sports.io/football/teams/40.png'
+  },
+  venue: {
+    id: 550,
+    name: 'Anfield',
+    address: 'Anfield Road',
+    city: 'Liverpool',
+    capacity: 55212,
+    surface: 'grass',
+    image: 'https://media-2.api-sports.io/football/venues/550.png'
+  }
+}
+[
+  {
+    role: 'system',
+    content: "You're a helpful assistant finding all the information related to football teams and matches"
+  },
+  {
+    role: 'user',
+    content: 'Tell me about last match between Arsenal and Liverpool'
+  },
+  {
+    role: 'assistant',
+    content: null,
+    function_call: { name: 'get_teams', arguments: '{\n  "name": "Arsenal"\n}' }
+  },
+  {
+    role: 'function',
+    name: 'get_teams',
+    content: '{"team":{"id":42,"name":"Arsenal","code":"ARS","country":"England","founded":1886,"national":false,"logo":"https://media-3.api-sports.io/football/teams/42.png"},"venue":{"id":494,"name":"Emirates Stadium","address":"Queensland Road","city":"London","capacity":60383,"surface":"grass","image":"https://media-1.api-sports.io/football/venues/494.png"}}'
+  },
+  {
+    role: 'assistant',
+    content: null,
+    function_call: { name: 'get_teams', arguments: '{\n  "name": "Liverpool"\n}' }
+  },
+  {
+    role: 'function',
+    name: 'get_teams',
+    content: '{"team":{"id":40,"name":"Liverpool","code":"LIV","country":"England","founded":1892,"national":false,"logo":"https://media-1.api-sports.io/football/teams/40.png"},"venue":{"id":550,"name":"Anfield","address":"Anfield Road","city":"Liverpool","capacity":55212,"surface":"grass","image":"https://media-2.api-sports.io/football/venues/550.png"}}'
+  }
+]
+request Football API: /fixtures/headtohead, params: {"h2h":"42-40"}
+{
+  get: 'fixtures/headtohead',
+  parameters: { h2h: '42-40' },
+  errors: [],
+  results: 34,
+  paging: { current: 1, total: 1 },
+  response: [
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    },
+    {
+      fixture: [Object],
+      league: [Object],
+      teams: [Object],
+      goals: [Object],
+      score: [Object]
+    }
+  ]
+} 200
+{
+  role: 'assistant',
+  content: null,
+  function_call: {
+    name: 'get_head_to_head_fixtures',
+    arguments: '{\n  "team1": 42,\n  "team2": 40\n}'
+  }
+} { h2h: '42-40' } {
+  fixture: {
+    id: 165,
+    referee: 'Andre Marriner, England',
+    timezone: 'UTC',
+    date: '2018-11-03T17:30:00+00:00',
+    timestamp: 1541266200,
+    periods: { first: 1541266200, second: 1541269800 },
+    venue: { id: 494, name: 'Emirates Stadium', city: 'London' },
+    status: { long: 'Match Finished', short: 'FT', elapsed: 90 }
+  },
+  league: {
+    id: 39,
+    name: 'Premier League',
+    country: 'England',
+    logo: 'https://media-1.api-sports.io/football/leagues/39.png',
+    flag: 'https://media-3.api-sports.io/flags/gb.svg',
+    season: 2018,
+    round: 'Regular Season - 11'
+  },
+  teams: {
+    home: {
+      id: 42,
+      name: 'Arsenal',
+      logo: 'https://media-2.api-sports.io/football/teams/42.png',
+      winner: null
+    },
+    away: {
+      id: 40,
+      name: 'Liverpool',
+      logo: 'https://media-1.api-sports.io/football/teams/40.png',
+      winner: null
+    }
+  },
+  goals: { home: 1, away: 1 },
+  score: {
+    halftime: { home: 0, away: 0 },
+    fulltime: { home: 1, away: 1 },
+    extratime: { home: null, away: null },
+    penalty: { home: null, away: null }
+  }
+}
+[
+  {
+    role: 'system',
+    content: "You're a helpful assistant finding all the information related to football teams and matches"
+  },
+  {
+    role: 'user',
+    content: 'Tell me about last match between Arsenal and Liverpool'
+  },
+  {
+    role: 'assistant',
+    content: null,
+    function_call: { name: 'get_teams', arguments: '{\n  "name": "Arsenal"\n}' }
+  },
+  {
+    role: 'function',
+    name: 'get_teams',
+    content: '{"team":{"id":42,"name":"Arsenal","code":"ARS","country":"England","founded":1886,"national":false,"logo":"https://media-3.api-sports.io/football/teams/42.png"},"venue":{"id":494,"name":"Emirates Stadium","address":"Queensland Road","city":"London","capacity":60383,"surface":"grass","image":"https://media-1.api-sports.io/football/venues/494.png"}}'
+  },
+  {
+    role: 'assistant',
+    content: null,
+    function_call: { name: 'get_teams', arguments: '{\n  "name": "Liverpool"\n}' }
+  },
+  {
+    role: 'function',
+    name: 'get_teams',
+    content: '{"team":{"id":40,"name":"Liverpool","code":"LIV","country":"England","founded":1892,"national":false,"logo":"https://media-1.api-sports.io/football/teams/40.png"},"venue":{"id":550,"name":"Anfield","address":"Anfield Road","city":"Liverpool","capacity":55212,"surface":"grass","image":"https://media-2.api-sports.io/football/venues/550.png"}}'
+  },
+  {
+    role: 'assistant',
+    content: null,
+    function_call: {
+      name: 'get_head_to_head_fixtures',
+      arguments: '{\n  "team1": 42,\n  "team2": 40\n}'
+    }
+  },
+  {
+    role: 'function',
+    name: 'get_head_to_head_fixtures',
+    content: '{"fixture":{"id":165,"referee":"Andre Marriner, England","timezone":"UTC","date":"2018-11-03T17:30:00+00:00","timestamp":1541266200,"periods":{"first":1541266200,"second":1541269800},"venue":{"id":494,"name":"Emirates Stadium","city":"London"},"status":{"long":"Match Finished","short":"FT","elapsed":90}},"league":{"id":39,"name":"Premier League","country":"England","logo":"https://media-1.api-sports.io/football/leagues/39.png","flag":"https://media-3.api-sports.io/flags/gb.svg","season":2018,"round":"Regular Season - 11"},"teams":{"home":{"id":42,"name":"Arsenal","logo":"https://media-2.api-sports.io/football/teams/42.png","winner":null},"away":{"id":40,"name":"Liverpool","logo":"https://media-1.api-sports.io/football/teams/40.png","winner":null}},"goals":{"home":1,"away":1},"score":{"halftime":{"home":0,"away":0},"fulltime":{"home":1,"away":1},"extratime":{"home":null,"away":null},"penalty":{"home":null,"away":null}}}'
+  }
+]
+final {
+  role: 'assistant',
+  content: 'The last match between Arsenal and Liverpool took place on November 3, 2018, at the Emirates Stadium in London. The match was refereed by Andre Marriner from England. The match ended in a draw with both teams scoring 1 goal each. The halftime score was 0-0. The match was part of the 2018 Premier League season. \n' +
+    '\n' +
+    'Here are the details of the teams:\n' +
+    '\n' +
+    '**Arsenal**\n' +
+    '- Country: England\n' +
+    '- Founded: 1886\n' +
+    '- Logo: [Arsenal Logo](https://media-3.api-sports.io/football/teams/42.png)\n' +
+    '- Venue: Emirates Stadium, London\n' +
+    '- Venue Capacity: 60383\n' +
+    '- Venue Surface: Grass\n' +
+    '- Venue Image: [Emirates Stadium](https://media-1.api-sports.io/football/venues/494.png)\n' +
+    '\n' +
+    '**Liverpool**\n' +
+    '- Country: England\n' +
+    '- Founded: 1892\n' +
+    '- Logo: [Liverpool Logo](https://media-1.api-sports.io/football/teams/40.png)\n' +
+    '- Venue: Anfield, Liverpool\n' +
+    '- Venue Capacity: 55212\n' +
+    '- Venue Surface: Grass\n' +
+    '- Venue Image: [Anfield](https://media-2.api-sports.io/football/venues/550.png)'
+}
